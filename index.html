@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anushka Srivastava · Software Engineer</title>
+<meta name="description" content="Anushka Srivastava — Software Engineer building scalable web systems, data pipelines and intelligent software across Full-Stack, Backend, AI/ML and Data Analytics." />
+<meta name="author" content="Anushka Srivastava" />
+<meta name="theme-color" content="#09090b" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Anushka Srivastava · Software Engineer" />
+<meta property="og:description" content="Building scalable web systems, data pipelines, and intelligent software." />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23818cf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='%2309090b'%3EAS%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { background:#09090b; scroll-behavior:smooth; scroll-padding-top:5rem; color-scheme:dark; }
+  body { color:#e4e4e7; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background:rgba(34,211,238,.3); color:#fff; }
+
+  .grad-text {
+    background:linear-gradient(100deg,#22d3ee 0%,#818cf8 45%,#e879f9 70%,#22d3ee 100%);
+    background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:shine 9s linear infinite;
+  }
+  @keyframes shine { to { background-position:200% center; } }
+
+  .glass {
+    background:linear-gradient(180deg,rgba(39,39,42,.55),rgba(24,24,27,.40));
+    border:1px solid rgba(255,255,255,.07);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  }
+  .glass-strong {
+    background:rgba(18,18,21,.92);
+    border:1px solid rgba(255,255,255,.09);
+    backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  }
+
+  .grid-bg {
+    background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:56px 56px;
+    -webkit-mask-image:radial-gradient(ellipse 75% 55% at 50% 0%,#000 30%,transparent 100%);
+            mask-image:radial-gradient(ellipse 75% 55% at 50% 0%,#000 30%,transparent 100%);
+  }
+  .orb { position:fixed; border-radius:9999px; filter:blur(100px); pointer-events:none; z-index:-2; }
+
+  /* Cursor-following spotlight border on cards */
+  .spot { position:relative; isolation:isolate; }
+  .spot::before {
+    content:""; position:absolute; inset:0; border-radius:inherit; padding:1px; pointer-events:none;
+    background:radial-gradient(380px circle at var(--x,-200px) var(--y,-200px),rgba(34,211,238,.7),rgba(129,140,248,.35) 40%,transparent 70%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude;
+    opacity:0; transition:opacity .35s;
+  }
+  .spot::after {
+    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:-1;
+    background:radial-gradient(520px circle at var(--x,-200px) var(--y,-200px),rgba(99,102,241,.10),transparent 60%);
+    opacity:0; transition:opacity .35s;
+  }
+  .spot:hover::before, .spot:hover::after { opacity:1; }
+
+  .grad-border::before {
+    content:""; position:absolute; inset:0; border-radius:inherit; padding:1px; pointer-events:none;
+    background:linear-gradient(120deg,rgba(34,211,238,.65),rgba(129,140,248,.15) 40%,rgba(232,121,249,.6));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor; mask-composite:exclude;
+  }
+
+  .btn-primary {
+    background:linear-gradient(100deg,#22d3ee,#818cf8); color:#09090b;
+    box-shadow:0 10px 30px -10px rgba(34,211,238,.55);
+    transition:transform .2s, filter .2s, box-shadow .2s;
+  }
+  .btn-primary:hover { filter:brightness(1.08); transform:translateY(-1px); box-shadow:0 14px 34px -10px rgba(129,140,248,.7); }
+  .btn-ghost { transition:transform .2s, background-color .2s, border-color .2s; }
+  .btn-ghost:hover { transform:translateY(-1px); }
+
+  .reveal { opacity:0; transform:translateY(26px); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity:1; transform:none; }
+
+  .caret { animation:blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity:0; } }
+
+  .pop { animation:pop .55s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes pop { from { opacity:0; transform:translateY(16px) scale(.98); } to { opacity:1; transform:none; } }
+
+  .ring-prog { stroke-dasharray:263.9; stroke-dashoffset:263.9; transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1) .3s; }
+  .reveal.in .ring-prog { stroke-dashoffset:33.5; }
+
+  .pts b { color:#fff; font-weight:600; }
+  .tech-hit { border-color:rgba(34,211,238,.6) !important; color:#a5f3fc !important; background:rgba(34,211,238,.12) !important; }
+
+  #cmdk-list li[aria-selected="true"] { background:rgba(255,255,255,.07); color:#fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; transition-delay:0s !important; }
+    .reveal { opacity:1; transform:none; }
+    html { scroll-behavior:auto; }
+  }
+</style>
+</head>
+
+<body class="font-sans">
+  <!-- Ambient background -->
+  <canvas id="bg" class="fixed inset-0 -z-10 pointer-events-none" aria-hidden="true"></canvas>
+  <div class="fixed inset-0 -z-10 grid-bg pointer-events-none" aria-hidden="true"></div>
+  <div class="orb w-[520px] h-[520px] -top-40 -left-40 bg-cyan-500/20" aria-hidden="true"></div>
+  <div class="orb w-[560px] h-[560px] top-1/3 -right-52 bg-indigo-600/20" aria-hidden="true"></div>
+
+  <div id="progress" class="fixed top-0 left-0 h-[2px] w-0 z-[60] bg-gradient-to-r from-cyan-400 via-indigo-400 to-fuchsia-400"></div>
+
+  <!-- NAV -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b border-transparent">
+    <nav class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between gap-4" aria-label="Primary">
+      <a href="#top" class="flex items-center gap-2.5 font-display font-semibold text-white">
+        <span class="w-8 h-8 rounded-lg grid place-items-center text-[13px] font-bold bg-gradient-to-br from-cyan-400 to-indigo-500 text-zinc-950">AS</span>
+        <span class="hidden sm:inline tracking-tight">Anushka Srivastava</span>
+      </a>
+      <div class="hidden md:flex items-center gap-1 text-sm">
+        <a href="#about" class="nav-link px-3 py-2 rounded-lg text-zinc-400 hover:text-white transition">About</a>
+        <a href="#skills" class="nav-link px-3 py-2 rounded-lg text-zinc-400 hover:text-white transition">Skills</a>
+        <a href="#projects" class="nav-link px-3 py-2 rounded-lg text-zinc-400 hover:text-white transition">Projects</a>
+        <a href="#experience" class="nav-link px-3 py-2 rounded-lg text-zinc-400 hover:text-white transition">Experience</a>
+        <a href="#credentials" class="nav-link px-3 py-2 rounded-lg text-zinc-400 hover:text-white transition">Credentials</a>
+        <a href="#contact" class="nav-link px-3 py-2 rounded-lg text-zinc-400 hover:text-white transition">Contact</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="cmdk-btn" class="hidden md:inline-flex items-center gap-2 pl-3 pr-1.5 py-1.5 rounded-lg text-xs text-zinc-400 bg-white/5 border border-white/10 hover:text-white hover:border-white/20 transition" aria-label="Open command palette">
+          <i data-i="search" class="w-3.5 h-3.5"></i><span>Search</span>
+          <kbd id="kbd" class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-zinc-300">Ctrl K</kbd>
+        </button>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 btn-primary text-sm px-4 py-2 rounded-lg font-semibold">
+          <i data-i="file" class="w-4 h-4"></i>Resume
+        </a>
+        <button id="menu-btn" class="md:hidden w-10 h-10 grid place-items-center rounded-lg bg-white/5 border border-white/10 text-zinc-200" aria-label="Toggle menu" aria-expanded="false">
+          <i data-i="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden mx-4 mb-3 glass-strong rounded-2xl p-2">
+      <a href="#about" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">About</a>
+      <a href="#skills" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Skills</a>
+      <a href="#projects" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Projects</a>
+      <a href="#experience" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Experience</a>
+      <a href="#credentials" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Credentials</a>
+      <a href="#contact" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener" class="mt-1 flex items-center justify-center gap-2 btn-primary px-4 py-3 rounded-xl font-semibold"><i data-i="file" class="w-4 h-4"></i>View Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="top" class="relative min-h-[100svh] flex items-center pt-28 pb-16">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 w-full grid lg:grid-cols-[1.1fr_.9fr] gap-12 lg:gap-10 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs sm:text-[13px] text-zinc-300 bg-white/5 border border-white/10">
+            <span class="relative flex w-2 h-2"><span class="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-60"></span><span class="relative w-2 h-2 rounded-full bg-emerald-400"></span></span>
+            Open to SDE · Backend · ML · Data roles
+          </div>
+          <p class="mt-7 font-mono text-sm text-cyan-300/90">Hi, I'm</p>
+          <h1 class="mt-2 font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02] text-white">
+            Anushka<br /><span class="grad-text">Srivastava</span>
+          </h1>
+          <p class="mt-6 text-lg sm:text-2xl font-display text-zinc-400">
+            Software Engineer <span class="text-zinc-600">/</span> <span id="typed" class="text-white"></span><span class="caret text-cyan-300">|</span>
+          </p>
+          <p class="mt-5 max-w-xl text-zinc-400 leading-relaxed">
+            Building <span class="text-zinc-200">scalable web systems</span>, <span class="text-zinc-200">data pipelines</span>, and <span class="text-zinc-200">intelligent software</span>.
+            B.Tech CSE (AI/ML) at Manipal University Jaipur — shipping production APIs, analytics pipelines and ML workflows across industry and research.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="resume.pdf" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold"><i data-i="file" class="w-4 h-4"></i>View Resume</a>
+            <a href="https://github.com/anu091104" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-zinc-100"><i data-i="github" class="w-4 h-4"></i>GitHub</a>
+            <a href="https://www.linkedin.com/in/anushka0904/" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-zinc-100"><i data-i="linkedin" class="w-4 h-4"></i>LinkedIn</a>
+            <a href="#contact" class="group inline-flex items-center gap-1.5 px-3 py-3 text-zinc-300 hover:text-white">Contact Me <i data-i="arrow" class="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i></a>
+          </div>
+          <p class="mt-7 flex items-center gap-2 text-sm text-zinc-500"><i data-i="pin" class="w-4 h-4"></i>Jaipur / Lucknow, India</p>
+        </div>
+
+        <!-- Terminal -->
+        <div class="reveal" style="transition-delay:150ms">
+          <div class="spot glass rounded-2xl overflow-hidden shadow-[0_30px_80px_-30px_rgba(34,211,238,.35)]">
+            <div class="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[.02]">
+              <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-400/80"></span>
+              <span class="ml-3 font-mono text-xs text-zinc-500">~/anushka — zsh</span>
+            </div>
+            <pre class="font-mono text-[12px] sm:text-[13px] leading-5 sm:leading-6 p-5 whitespace-pre-wrap break-words min-h-[400px] sm:min-h-[430px]"><code id="term"></code></pre>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-[11px] font-mono text-zinc-500 hover:text-zinc-300">
+        scroll
+        <span class="w-5 h-8 rounded-full border border-zinc-600 flex justify-center pt-1.5"><span class="w-1 h-1.5 rounded-full bg-zinc-400 animate-bounce"></span></span>
+      </a>
+    </section>
+
+    <!-- STATS -->
+    <section class="pb-10" aria-label="Highlights">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal grid grid-cols-2 md:grid-cols-5 gap-px bg-white/[.06] rounded-2xl overflow-hidden border border-white/5">
+          <div class="bg-zinc-950/80 p-5 sm:p-6"><p class="font-display text-3xl sm:text-4xl font-semibold text-white"><span data-count="3">0</span></p><p class="mt-1 text-xs sm:text-sm text-zinc-500">Engineering &amp; research roles</p></div>
+          <div class="bg-zinc-950/80 p-5 sm:p-6"><p class="font-display text-3xl sm:text-4xl font-semibold text-white"><span data-count="6" data-suffix="+">0</span></p><p class="mt-1 text-xs sm:text-sm text-zinc-500">Projects built end-to-end</p></div>
+          <div class="bg-zinc-950/80 p-5 sm:p-6"><p class="font-display text-3xl sm:text-4xl font-semibold text-white"><span data-count="2000" data-suffix="+">0</span></p><p class="mt-1 text-xs sm:text-sm text-zinc-500">Listings scraped &amp; validated</p></div>
+          <div class="bg-zinc-950/80 p-5 sm:p-6"><p class="font-display text-3xl sm:text-4xl font-semibold text-white"><span data-count="100" data-suffix="K+">0</span></p><p class="mt-1 text-xs sm:text-sm text-zinc-500">Observations in ML pipelines</p></div>
+          <div class="bg-zinc-950/80 p-5 sm:p-6 col-span-2 md:col-span-1"><p class="font-display text-3xl sm:text-4xl font-semibold grad-text"><span data-count="8.73" data-decimals="2">0</span></p><p class="mt-1 text-xs sm:text-sm text-zinc-500">CGPA · Dean's List</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section id="about" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal max-w-2xl">
+          <p class="font-mono text-sm text-cyan-300/90">01 — Core pillars</p>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">One engineer, three ways to ship.</h2>
+          <p class="mt-3 text-zinc-400 leading-relaxed">I move comfortably between the API layer, the data layer and the model layer — and I've done each in a real team, not just a tutorial.</p>
+        </div>
+        <div id="pillars" class="mt-12 grid md:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div class="max-w-2xl">
+            <p class="font-mono text-sm text-cyan-300/90">02 — Skills matrix</p>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">The toolkit.</h2>
+            <p class="mt-3 text-zinc-400">Click any highlighted skill to jump to the projects where I've used it.</p>
+          </div>
+          <p class="flex items-center gap-2 text-xs font-mono text-zinc-500"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>used in featured projects</p>
+        </div>
+        <div id="skills-grid" class="mt-12 grid md:grid-cols-2 lg:grid-cols-6 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal max-w-2xl">
+          <p class="font-mono text-sm text-cyan-300/90">03 — Selected projects</p>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">Things I've built.</h2>
+          <p class="mt-3 text-zinc-400">From secure API platforms to forecasting systems and LLM-powered developer tools.</p>
+        </div>
+        <div class="reveal mt-10 flex flex-col sm:flex-row sm:items-center gap-3">
+          <div id="filters" role="tablist" aria-label="Filter projects" class="inline-flex flex-wrap gap-1 p-1 rounded-xl glass w-fit"></div>
+          <div id="tech-pill" class="hidden items-center gap-2 pl-3 pr-1.5 py-1.5 rounded-lg text-sm bg-cyan-400/10 border border-cyan-400/30 text-cyan-100 w-fit">
+            Using <b id="tech-name" class="font-semibold text-white"></b>
+            <button id="tech-clear" class="w-6 h-6 grid place-items-center rounded-md hover:bg-white/10" aria-label="Clear skill filter"><i data-i="x" class="w-3.5 h-3.5"></i></button>
+          </div>
+        </div>
+        <div id="projects-grid" class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        <div class="reveal mt-10 text-center">
+          <a href="https://github.com/anu091104?tab=repositories" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-200"><i data-i="github" class="w-4 h-4"></i>See all repositories<i data-i="arrow" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal max-w-2xl">
+          <p class="font-mono text-sm text-cyan-300/90">04 — Experience</p>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">Where I've shipped.</h2>
+          <p class="mt-3 text-zinc-400">Backend engineering, market analytics and applied ML research — three different teams, one habit of delivering.</p>
+        </div>
+        <div id="timeline" class="relative mt-12">
+          <div class="absolute left-4 sm:left-6 top-2 bottom-2 w-px bg-white/10"></div>
+          <div id="timeline-fill" class="absolute left-4 sm:left-6 top-2 w-px h-0 bg-gradient-to-b from-cyan-400 via-indigo-400 to-fuchsia-400 shadow-[0_0_12px_rgba(34,211,238,.6)]"></div>
+          <ol id="exp-list" class="space-y-6"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section id="credentials" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal max-w-2xl">
+          <p class="font-mono text-sm text-cyan-300/90">05 — Education &amp; credentials</p>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">Foundations, verified.</h2>
+        </div>
+        <div class="mt-12 grid lg:grid-cols-5 gap-5">
+          <!-- Education -->
+          <article class="reveal spot glass rounded-2xl p-7 lg:col-span-2 flex flex-col">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl grid place-items-center ring-1 text-cyan-300 bg-cyan-400/10 ring-cyan-400/25"><i data-i="grad" class="w-5 h-5"></i></div>
+              <p class="font-mono text-xs text-zinc-500">EDUCATION</p>
+            </div>
+            <h3 class="mt-5 font-display text-2xl font-semibold text-white">Manipal University Jaipur</h3>
+            <p class="mt-1 text-zinc-300">B.Tech, Computer Science &amp; Engineering (AI/ML)</p>
+            <p class="mt-1 text-sm text-zinc-500">Expected 2027</p>
+            <div class="mt-auto pt-8 flex items-center gap-5">
+              <div class="relative w-24 h-24 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-24 h-24 -rotate-90">
+                  <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#818cf8"/></linearGradient></defs>
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="8"/>
+                  <circle class="ring-prog" cx="50" cy="50" r="42" fill="none" stroke="url(#rg)" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                <div class="absolute inset-0 grid place-items-center text-center"><div><p class="font-display text-xl font-semibold text-white leading-none">8.73</p><p class="text-[10px] text-zinc-500 mt-1">/ 10</p></div></div>
+              </div>
+              <div>
+                <p class="text-zinc-200 font-medium">Cumulative GPA</p>
+                <span class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs bg-amber-400/10 text-amber-300 border border-amber-400/25"><i data-i="award" class="w-3.5 h-3.5"></i>Dean's List</span>
+              </div>
+            </div>
+          </article>
+          <!-- Certs -->
+          <div class="lg:col-span-3 grid sm:grid-cols-2 gap-5" id="certs"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="reveal grad-border relative overflow-hidden rounded-3xl glass p-7 sm:p-14">
+          <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-indigo-500/25 blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-28 -left-20 w-72 h-72 rounded-full bg-cyan-500/20 blur-3xl pointer-events-none"></div>
+          <div class="relative">
+            <p class="font-mono text-sm text-cyan-300/90">06 — Contact</p>
+            <h2 class="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight text-white max-w-2xl">Let's build something <span class="grad-text">that ships.</span></h2>
+            <p class="mt-4 max-w-xl text-zinc-400 leading-relaxed">I'm open to Software Engineering, Backend, Full-Stack, ML and Data roles. Whether it's an opportunity or a question about my work, my inbox is open.</p>
+
+            <div class="mt-9 grid sm:grid-cols-2 gap-4 max-w-2xl">
+              <div class="flex items-center gap-3 rounded-2xl bg-white/[.04] border border-white/10 p-4">
+                <div class="w-10 h-10 rounded-xl grid place-items-center bg-cyan-400/10 text-cyan-300 shrink-0"><i data-i="mail" class="w-5 h-5"></i></div>
+                <div class="min-w-0"><p class="text-xs text-zinc-500">Email</p><a href="mailto:anushkasri0904@gmail.com" class="block truncate text-zinc-100 hover:text-cyan-300">anushkasri0904@gmail.com</a></div>
+                <button data-copy="anushkasri0904@gmail.com" data-msg="Email copied" class="ml-auto w-9 h-9 grid place-items-center rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 shrink-0" aria-label="Copy email address"><i data-i="copy" class="w-4 h-4"></i></button>
+              </div>
+              <div class="flex items-center gap-3 rounded-2xl bg-white/[.04] border border-white/10 p-4">
+                <div class="w-10 h-10 rounded-xl grid place-items-center bg-indigo-400/10 text-indigo-300 shrink-0"><i data-i="phone" class="w-5 h-5"></i></div>
+                <div class="min-w-0"><p class="text-xs text-zinc-500">Phone</p><a href="tel:+919555655127" class="block truncate text-zinc-100 hover:text-indigo-300">+91-9555655127</a></div>
+                <button data-copy="+91-9555655127" data-msg="Phone number copied" class="ml-auto w-9 h-9 grid place-items-center rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 shrink-0" aria-label="Copy phone number"><i data-i="copy" class="w-4 h-4"></i></button>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="mailto:anushkasri0904@gmail.com?subject=Hello%20Anushka%20%E2%80%94%20Opportunity" class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold"><i data-i="mail" class="w-4 h-4"></i>Say hello</a>
+              <a href="https://www.linkedin.com/in/anushka0904/" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-100"><i data-i="linkedin" class="w-4 h-4"></i>LinkedIn</a>
+              <a href="https://github.com/anu091104" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-100"><i data-i="github" class="w-4 h-4"></i>GitHub</a>
+              <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-100"><i data-i="file" class="w-4 h-4"></i>Resume</a>
+            </div>
+            <p class="mt-8 flex items-center gap-2 text-sm text-zinc-500"><i data-i="pin" class="w-4 h-4"></i>Jaipur / Lucknow, India · IST (UTC+5:30)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+      <p>© <span id="year"></span> Anushka Srivastava · Built with HTML, Tailwind CSS &amp; vanilla JS</p>
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/anu091104" target="_blank" rel="noopener" class="w-9 h-9 grid place-items-center rounded-lg hover:bg-white/5 hover:text-white" aria-label="GitHub"><i data-i="github" class="w-4 h-4"></i></a>
+        <a href="https://www.linkedin.com/in/anushka0904/" target="_blank" rel="noopener" class="w-9 h-9 grid place-items-center rounded-lg hover:bg-white/5 hover:text-white" aria-label="LinkedIn"><i data-i="linkedin" class="w-4 h-4"></i></a>
+        <a href="mailto:anushkasri0904@gmail.com" class="w-9 h-9 grid place-items-center rounded-lg hover:bg-white/5 hover:text-white" aria-label="Email"><i data-i="mail" class="w-4 h-4"></i></a>
+        <a href="#top" class="ml-2 inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white">Back to top <i data-i="up" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command palette -->
+  <div id="cmdk" class="fixed inset-0 z-[70] hidden items-start justify-center pt-[14vh] px-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="w-full max-w-lg glass-strong rounded-2xl overflow-hidden shadow-2xl pop">
+      <div class="flex items-center gap-3 px-4 border-b border-white/10">
+        <i data-i="search" class="w-4 h-4 text-zinc-500"></i>
+        <input id="cmdk-input" class="flex-1 bg-transparent py-4 outline-none text-zinc-100 placeholder:text-zinc-500" placeholder="Jump to a section, copy email, open GitHub…" autocomplete="off" />
+        <kbd class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-zinc-400">esc</kbd>
+      </div>
+      <ul id="cmdk-list" class="max-h-80 overflow-y-auto p-2" role="listbox"></ul>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[80] flex items-center gap-2 px-4 py-2.5 rounded-xl glass-strong text-sm text-zinc-100 opacity-0 translate-y-3 pointer-events-none transition-all duration-300" role="status" aria-live="polite"></div>
+
+<script>
+/* =========================================================
+   CONTENT — edit everything about you here
+   ========================================================= */
+const DATA = {
+  name: 'Anushka Srivastava',
+  email: 'anushkasri0904@gmail.com',
+  phone: '+91-9555655127',
+  github: 'https://github.com/anu091104',
+  linkedin: 'https://www.linkedin.com/in/anushka0904/',
+  resume: 'resume.pdf', // put your resume.pdf next to index.html
+};
+
+const ROLES = ['Backend Engineer', 'Full-Stack Developer', 'ML Engineer', 'Data & Analytics Engineer'];
+
+const PILLARS = [
+  {
+    title: 'Full-Stack & Systems Engineering', icon: 'layers', accent: 'cyan',
+    desc: 'REST APIs, auth and access control, schema design and containerized services — from the database to the UI.',
+    proof: ['10+ production REST endpoints at TechLearn', 'JWT + RBAC API platform (API Sentinel)', 'Next.js / React front ends on Flask & FastAPI'],
+    tags: ['Node.js', 'FastAPI', 'React', 'PostgreSQL', 'MongoDB', 'Docker'],
+  },
+  {
+    title: 'Data & Analytics Engineering', icon: 'chart', accent: 'indigo',
+    desc: 'Scraping, validation and benchmarking pipelines that turn messy market data into decisions.',
+    proof: ['2,000+ listings across 3 marketplaces at Titan', '40+ parameter competitor benchmarking framework', 'Demand forecasting with EOQ & safety stock'],
+    tags: ['Python', 'Pandas', 'SQL', 'Web Scraping', 'Streamlit', 'Prophet'],
+  },
+  {
+    title: 'Applied AI / ML', icon: 'cpu', accent: 'fuchsia',
+    desc: 'End-to-end ML: heterogeneous data ingestion, automated feature pipelines, forecasting, NLP and LLM-powered tools.',
+    proof: ['100K+ observations in climate-aware AI research', '5+ stage automated geospatial ML workflows', 'Gemini-powered codebase analysis (RepoLens)'],
+    tags: ['Scikit-learn', 'PyTorch', 'TensorFlow', 'NLP', 'OpenCV', 'Gemini API'],
+  },
+];
+
+const SKILLS = [
+  { group: 'Languages', icon: 'code', items: ['Python', 'C++', 'JavaScript', 'TypeScript', 'SQL', 'Java', 'C', 'HTML/CSS'] },
+  { group: 'Web & Backend', icon: 'server', items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'React.js', 'Next.js', 'Tailwind CSS', 'REST APIs', 'JWT', 'RBAC', 'Web Scraping'] },
+  { group: 'Databases & Cloud', icon: 'database', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLAlchemy', 'Mongoose', 'Firebase', 'AWS', 'Vercel', 'Render'] },
+  { group: 'Data Science & ML', icon: 'cpu', items: ['Scikit-learn', 'TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'OpenCV', 'Matplotlib', 'Seaborn', 'TextBlob', 'Prophet', 'NLP', 'Streamlit'] },
+  { group: 'Tools & Infrastructure', icon: 'wrench', items: ['Git', 'GitHub', 'Docker', 'Linux (RHEL)', 'Postman', 'VS Code', 'GitHub API', 'Gemini API'] },
+];
+
+// cats: 'fullstack' | 'ai' | 'devops'.  repo: paste the exact repo URL; if empty, links to a GitHub search for `q`.
+const PROJECTS = [
+  {
+    title: 'API Sentinel', label: 'Backend · Security · DevOps', icon: 'shield', accent: 'cyan', cats: ['fullstack', 'devops'],
+    summary: 'Secure API management platform to register, protect and monitor API endpoints.',
+    points: ['JWT authentication with role-based access control', 'Endpoint health monitoring with request logging', 'Dockerized for reproducible deployment'],
+    stack: ['FastAPI', 'Python', 'PostgreSQL', 'SQLAlchemy', 'JWT', 'RBAC', 'Docker'],
+    repo: 'https://github.com/anu091104/Api-sentinel', demo: '', q: 'sentinel',
+  },
+  {
+    title: 'RepoLens', label: 'AI · Developer Tools', icon: 'search', accent: 'fuchsia', cats: ['fullstack', 'ai', 'devops'],
+    summary: 'AI-powered repository analysis that turns any GitHub repo into a readable brief.',
+    points: ['Summarizes codebases with the Gemini API', 'Detects tech stacks & extracts metadata across 5+ languages', 'React UI on a FastAPI service using the GitHub API'],
+    stack: ['React.js', 'FastAPI', 'Python', 'Gemini API', 'GitHub API', 'REST APIs'],
+    repo: 'https://github.com/anu091104/Github-Repo-Explainer', demo: '', q: 'repolens',
+  },
+  {
+    title: 'CraftMatch', label: 'Full-Stack · Matching', icon: 'users', accent: 'indigo', cats: ['fullstack'],
+    summary: 'Two-sided platform matching artisans with businesses.',
+    points: ['Intelligent scoring on location, preferences & performance', 'Flask REST APIs with a SQLAlchemy data layer', 'Responsive Next.js + Tailwind CSS front end'],
+    stack: ['Next.js', 'Flask', 'Python', 'SQLAlchemy', 'Tailwind CSS', 'REST APIs'],
+    repo: 'https://github.com/aayushisabharwal/GenAi-Exchange-Hackathon-', demo: '', q: 'craftmatch',
+  },
+  {
+    title: 'Stock Sentiment Analysis', label: 'NLP · Classification', icon: 'activity', accent: 'emerald', cats: ['ai'],
+    summary: 'End-to-end NLP pipeline linking text sentiment to stock-market trends.',
+    points: ['Sentiment features engineered with TextBlob', 'Random Forest classification model', 'Evaluated with ROC curves & accuracy metrics'],
+    stack: ['Python', 'Scikit-learn', 'TextBlob', 'NLP', 'Pandas'],
+    repo: '', demo: '', q: 'sentiment',
+  },
+  {
+    title: 'Retail Inventory Optimization', label: 'Forecasting · Analytics', icon: 'chart', accent: 'amber', cats: ['ai'],
+    summary: 'Demand forecasting and inventory-planning dashboard for retail.',
+    points: ['30-day demand forecasts with Prophet', 'Automated EOQ & safety-stock calculations', 'Price-sensitivity models in an interactive Streamlit app'],
+    stack: ['Python', 'Prophet', 'Scikit-learn', 'Streamlit', 'Pandas'],
+    repo: '', demo: '', q: 'inventory',
+  },
+  {
+    title: 'Expense Tracker', label: 'Full-Stack · Data Viz', icon: 'database', accent: 'sky', cats: ['fullstack'],
+    summary: 'Personal-finance web app with analytics built in.',
+    points: ['Custom REST APIs built with Flask', 'MongoDB aggregation pipelines for spending insights', 'Interactive Matplotlib visual analytics'],
+    stack: ['Python', 'Flask', 'MongoDB', 'Matplotlib', 'REST APIs'],
+    repo: '', demo: '', q: 'expense',
+  },
+];
+
+const EXPERIENCE = [
+  {
+    role: 'Research Contributor (AI/ML)', org: 'Research & Development Cell', unit: 'Manipal University Jaipur',
+    dates: 'Jan 2026 — Present', current: true, domain: 'Applied AI · Research', accent: 'fuchsia', icon: 'cpu',
+    points: [
+      'Developing a <b>climate-aware AI system</b> that fuses heterogeneous sources — satellite imagery, weather records and soil datasets — spanning <b>100K+ observations</b>.',
+      'Built scalable preprocessing pipelines and modular <b>5+ stage automated ML workflows</b> for geospatial and time-series data.',
+    ],
+    tags: ['Python', 'Geospatial', 'Time-series', 'ML Pipelines', 'Pandas'],
+  },
+  {
+    role: 'Analytics & Insights Intern', org: 'Titan Company Limited', unit: 'Watches Division',
+    dates: 'Jun 2026 — Jul 2026', domain: 'Data & Analytics', accent: 'indigo', icon: 'chart',
+    points: [
+      'Developed Python web-scraping pipelines to extract and validate <b>2,000+ premium watch listings</b> across Amazon, Flipkart and Myntra, covering <b>34 global &amp; domestic brands</b>.',
+      'Designed a competitor benchmarking framework across <b>40+ parameters</b> and automated attribute extraction across <b>3 e-commerce platforms</b>.',
+    ],
+    tags: ['Python', 'Web Scraping', 'Pandas', 'Data Validation', 'Benchmarking'],
+  },
+  {
+    role: 'Backend Development Intern', org: 'TechLearn Solutions Pvt. Ltd.', unit: '',
+    dates: 'Mar 2026 — May 2026', domain: 'Backend Engineering', accent: 'cyan', icon: 'server',
+    points: [
+      'Engineered <b>10+ RESTful API endpoints</b> with Node.js, Express.js and MongoDB powering assessment workflows, role-based access control and college management.',
+      'Designed optimized MongoDB/Mongoose schemas with <b>indexing, CRUD and pagination</b> across core backend modules.',
+    ],
+    tags: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'RBAC', 'REST APIs'],
+  },
+];
+
+const CERTS = [
+  { name: 'Red Hat System Administration I & II', issuer: 'Red Hat · RH124 / RH134', accent: 'red', icon: 'terminal' },
+  { name: 'Python Essentials', issuer: 'Cisco Networking Academy', accent: 'sky', icon: 'code' },
+  { name: 'SQL Fundamentals', issuer: 'Oracle', accent: 'orange', icon: 'database' },
+  { name: 'Azure AI / ML Fundamentals', issuer: 'Microsoft', accent: 'blue', icon: 'cloud' },
+  { name: 'Women in Tech', issuer: 'Community member — championing inclusive engineering', accent: 'fuchsia', icon: 'users', wide: true },
+];
+
+/* =========================================================
+   ICONS
+   ========================================================= */
+const ICONS = {
+  github: '<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>',
+  linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
+  mail: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+  phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  file: '<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/>',
+  arrow: '<path d="M7 7h10v10"/><path d="M7 17 17 7"/>',
+  up: '<path d="m18 15-6-6-6 6"/>',
+  copy: '<rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  server: '<rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/>',
+  chart: '<path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+  cpu: '<rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/>',
+  code: '<path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/>',
+  database: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>',
+  wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  award: '<circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  terminal: '<path d="m4 17 6-6-6-6"/><path d="M12 19h8"/>',
+  pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+  grad: '<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><path d="M22 10v6"/>',
+  search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+  menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+  x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  layers: '<path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>',
+  cloud: '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>',
+  activity: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+  external: '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+};
+const I = (name, cls = 'w-4 h-4') =>
+  `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ''}</svg>`;
+
+const ACC = {
+  cyan:    { box: 'text-cyan-300 bg-cyan-400/10 ring-cyan-400/25', dot: 'bg-cyan-400', text: 'text-cyan-300', ring: 'ring-cyan-400' },
+  indigo:  { box: 'text-indigo-300 bg-indigo-400/10 ring-indigo-400/25', dot: 'bg-indigo-400', text: 'text-indigo-300', ring: 'ring-indigo-400' },
+  fuchsia: { box: 'text-fuchsia-300 bg-fuchsia-400/10 ring-fuchsia-400/25', dot: 'bg-fuchsia-400', text: 'text-fuchsia-300', ring: 'ring-fuchsia-400' },
+  emerald: { box: 'text-emerald-300 bg-emerald-400/10 ring-emerald-400/25', dot: 'bg-emerald-400', text: 'text-emerald-300', ring: 'ring-emerald-400' },
+  amber:   { box: 'text-amber-300 bg-amber-400/10 ring-amber-400/25', dot: 'bg-amber-400', text: 'text-amber-300', ring: 'ring-amber-400' },
+  sky:     { box: 'text-sky-300 bg-sky-400/10 ring-sky-400/25', dot: 'bg-sky-400', text: 'text-sky-300', ring: 'ring-sky-400' },
+  red:     { box: 'text-red-300 bg-red-400/10 ring-red-400/25', dot: 'bg-red-400', text: 'text-red-300', ring: 'ring-red-400' },
+  orange:  { box: 'text-orange-300 bg-orange-400/10 ring-orange-400/25', dot: 'bg-orange-400', text: 'text-orange-300', ring: 'ring-orange-400' },
+  blue:    { box: 'text-blue-300 bg-blue-400/10 ring-blue-400/25', dot: 'bg-blue-400', text: 'text-blue-300', ring: 'ring-blue-400' },
+};
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const norm = s => s.toLowerCase().replace(/\.js$/, '');
+
+function hydrateIcons(root = document) {
+  $$('i[data-i]', root).forEach(el => { el.outerHTML = I(el.dataset.i, el.className); });
+}
+
+let toastTimer;
+function toast(msg) {
+  const t = $('#toast');
+  t.innerHTML = I('check', 'w-4 h-4 text-emerald-400') + `<span>${msg}</span>`;
+  t.classList.remove('opacity-0', 'translate-y-3');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.add('opacity-0', 'translate-y-3'), 2000);
+}
+
+async function copyText(text, msg = 'Copied') {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch {}
+    ta.remove();
+  }
+  toast(msg);
+}
+
+const openUrl = url => window.open(url, '_blank', 'noopener');
+const go = sel => $(sel)?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+
+/* =========================================================
+   RENDER
+   ========================================================= */
+function renderPillars() {
+  $('#pillars').innerHTML = PILLARS.map((p, i) => {
+    const a = ACC[p.accent];
+    return `<article class="spot glass rounded-2xl p-6 sm:p-7 reveal flex flex-col" style="transition-delay:${i * 100}ms">
+      <div class="w-11 h-11 rounded-xl grid place-items-center ring-1 ${a.box}">${I(p.icon, 'w-5 h-5')}</div>
+      <h3 class="font-display text-xl font-semibold text-white mt-5">${p.title}</h3>
+      <p class="text-zinc-400 text-sm leading-relaxed mt-2">${p.desc}</p>
+      <ul class="mt-5 space-y-2.5">${p.proof.map(x => `<li class="flex gap-2.5 text-sm text-zinc-300"><span class="mt-[7px] w-1.5 h-1.5 rounded-full shrink-0 ${a.dot}"></span>${x}</li>`).join('')}</ul>
+      <div class="mt-auto pt-6 flex flex-wrap gap-1.5">${p.tags.map(t => `<span class="px-2 py-1 rounded-md text-xs font-mono bg-white/[.04] text-zinc-400 border border-white/5">${t}</span>`).join('')}</div>
+    </article>`;
+  }).join('');
+}
+
+const projectTech = new Set(PROJECTS.flatMap(p => p.stack.map(norm)));
+
+function renderSkills() {
+  $('#skills-grid').innerHTML = SKILLS.map((g, i) => {
+    const span = i < 3 ? 'lg:col-span-2' : (i === SKILLS.length - 1 ? 'md:col-span-2 lg:col-span-3' : 'lg:col-span-3');
+    const chips = g.items.map(s => projectTech.has(norm(s))
+      ? `<button data-tech="${s}" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm bg-white/[.05] border border-white/10 text-zinc-100 hover:border-cyan-400/50 hover:bg-cyan-400/10 hover:text-white transition" title="See projects using ${s}"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>${s}</button>`
+      : `<span class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-white/[.02] border border-white/5 text-zinc-400">${s}</span>`
+    ).join('');
+    return `<article class="spot glass rounded-2xl p-6 reveal ${span}" style="transition-delay:${i * 70}ms">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg grid place-items-center bg-white/5 text-zinc-300">${I(g.icon, 'w-[18px] h-[18px]')}</div>
+          <h3 class="font-display font-semibold text-white">${g.group}</h3>
+        </div>
+        <span class="font-mono text-xs text-zinc-500">${String(g.items.length).padStart(2, '0')}</span>
+      </div>
+      <div class="mt-5 flex flex-wrap gap-2">${chips}</div>
+    </article>`;
+  }).join('');
+}
+
+const CATS = [['all', 'All'], ['fullstack', 'Full-Stack & Backend'], ['ai', 'AI & Data Science'], ['devops', 'DevOps / Tools']];
+let activeCat = 'all';
+let activeTech = null;
+
+function renderFilters() {
+  $('#filters').innerHTML = CATS.map(([k, label]) => {
+    const n = k === 'all' ? PROJECTS.length : PROJECTS.filter(p => p.cats.includes(k)).length;
+    const on = k === activeCat;
+    return `<button role="tab" aria-selected="${on}" data-cat="${k}" class="px-3.5 py-2 rounded-lg text-sm transition ${on ? 'bg-white text-zinc-900 font-medium shadow' : 'text-zinc-400 hover:text-white hover:bg-white/5'}">${label}<span class="ml-1.5 text-xs ${on ? 'text-zinc-500' : 'text-zinc-600'}">${n}</span></button>`;
+  }).join('');
+}
+
+function projectCard(p, i) {
+  const a = ACC[p.accent];
+  const repo = p.repo || `${DATA.github}?tab=repositories&q=${encodeURIComponent(p.q)}`;
+  const chips = p.stack.map(s => {
+    const hit = activeTech && norm(s) === norm(activeTech);
+    return `<span class="px-2 py-1 rounded-md text-xs font-mono bg-white/[.04] text-zinc-400 border border-white/5 ${hit ? 'tech-hit' : ''}">${s}</span>`;
+  }).join('');
+  return `<article class="spot glass rounded-2xl p-6 flex flex-col pop group" style="animation-delay:${i * 60}ms">
+    <div class="flex items-start justify-between">
+      <div class="w-11 h-11 rounded-xl grid place-items-center ring-1 ${a.box}">${I(p.icon, 'w-5 h-5')}</div>
+      <div class="flex items-center gap-1">
+        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="w-9 h-9 grid place-items-center rounded-lg text-zinc-400 hover:text-white hover:bg-white/10" aria-label="${p.title} live demo">${I('external')}</a>` : ''}
+        <a href="${repo}" target="_blank" rel="noopener" class="w-9 h-9 grid place-items-center rounded-lg text-zinc-400 hover:text-white hover:bg-white/10" aria-label="${p.title} on GitHub">${I('github')}</a>
+      </div>
+    </div>
+    <p class="mt-5 font-mono text-xs ${a.text}">${p.label}</p>
+    <h3 class="mt-1 font-display text-xl font-semibold text-white">${p.title}</h3>
+    <p class="mt-2 text-sm text-zinc-400 leading-relaxed">${p.summary}</p>
+    <ul class="mt-4 space-y-2">${p.points.map(x => `<li class="flex gap-2 text-sm text-zinc-300">${I('check', 'w-4 h-4 mt-0.5 shrink-0 ' + a.text)}<span>${x}</span></li>`).join('')}</ul>
+    <div class="mt-auto pt-6 flex flex-wrap gap-1.5">${chips}</div>
+  </article>`;
+}
+
+function renderProjects() {
+  const list = PROJECTS.filter(p =>
+    (activeCat === 'all' || p.cats.includes(activeCat)) &&
+    (!activeTech || p.stack.some(s => norm(s) === norm(activeTech))));
+  $('#projects-grid').innerHTML = list.length
+    ? list.map(projectCard).join('')
+    : `<p class="col-span-full text-center text-zinc-500 py-12">No projects match this combination — <button class="text-cyan-300 underline" onclick="setCat('all');clearTech()">reset filters</button>.</p>`;
+  const pill = $('#tech-pill');
+  if (activeTech) { $('#tech-name').textContent = activeTech; pill.classList.remove('hidden'); pill.classList.add('inline-flex'); }
+  else { pill.classList.add('hidden'); pill.classList.remove('inline-flex'); }
+}
+
+function setCat(cat) { activeCat = cat; renderFilters(); renderProjects(); }
+function setTech(tech) { activeTech = tech; activeCat = 'all'; renderFilters(); renderProjects(); }
+function clearTech() { activeTech = null; renderProjects(); }
+
+function renderExperience() {
+  $('#exp-list').innerHTML = EXPERIENCE.map((e, i) => {
+    const a = ACC[e.accent];
+    return `<li class="relative pl-12 sm:pl-16 reveal" style="transition-delay:${i * 80}ms">
+      <span class="absolute left-4 sm:left-6 top-8 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-zinc-950 ring-2 ${a.ring}">
+        ${e.current ? `<span class="absolute inset-0 rounded-full ${a.dot} animate-ping opacity-50"></span>` : ''}
+      </span>
+      <div class="spot glass rounded-2xl p-6 sm:p-7">
+        <div class="flex flex-wrap items-start justify-between gap-3">
+          <div class="flex items-start gap-4">
+            <div class="hidden sm:grid w-11 h-11 rounded-xl place-items-center ring-1 shrink-0 ${a.box}">${I(e.icon, 'w-5 h-5')}</div>
+            <div>
+              <h3 class="font-display text-lg sm:text-xl font-semibold text-white">${e.role}</h3>
+              <p class="text-zinc-300 mt-0.5">${e.org}${e.unit ? `<span class="text-zinc-500"> · ${e.unit}</span>` : ''}</p>
+              <p class="mt-2 font-mono text-xs ${a.text}">${e.domain}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            ${e.current ? '<span class="px-2 py-1 rounded-full text-[11px] font-medium bg-emerald-400/10 text-emerald-300 border border-emerald-400/25">Current</span>' : ''}
+            <span class="font-mono text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 whitespace-nowrap">${e.dates}</span>
+          </div>
+        </div>
+        <ul class="pts mt-5 space-y-3">${e.points.map(x => `<li class="flex gap-3 text-[15px] text-zinc-400 leading-relaxed"><span class="mt-[9px] w-1.5 h-1.5 rounded-full shrink-0 ${a.dot}"></span><span>${x}</span></li>`).join('')}</ul>
+        <div class="mt-5 flex flex-wrap gap-1.5">${e.tags.map(t => `<span class="px-2 py-1 rounded-md text-xs font-mono bg-white/[.04] text-zinc-400 border border-white/5">${t}</span>`).join('')}</div>
+      </div>
+    </li>`;
+  }).join('');
+}
+
+function renderCerts() {
+  $('#certs').innerHTML = CERTS.map((c, i) => {
+    const a = ACC[c.accent];
+    return `<article class="spot glass rounded-2xl p-5 flex items-start gap-4 reveal ${c.wide ? 'sm:col-span-2' : ''}" style="transition-delay:${i * 70}ms">
+      <div class="w-11 h-11 rounded-xl grid place-items-center ring-1 shrink-0 ${a.box}">${I(c.icon, 'w-5 h-5')}</div>
+      <div class="min-w-0">
+        <p class="font-medium text-zinc-100">${c.name}</p>
+        <p class="text-sm text-zinc-500 mt-0.5">${c.issuer}</p>
+      </div>
+      ${c.wide ? '' : `<span class="ml-auto shrink-0 text-zinc-600">${I('award', 'w-4 h-4')}</span>`}
+    </article>`;
+  }).join('');
+}
+
+/* =========================================================
+   HERO: typed roles + terminal
+   ========================================================= */
+async function typeRoles() {
+  const el = $('#typed');
+  if (reduceMotion) { el.textContent = ROLES[0]; return; }
+  let i = 0;
+  while (true) {
+    const word = ROLES[i % ROLES.length];
+    for (let c = 1; c <= word.length; c++) { el.textContent = word.slice(0, c); await sleep(55); }
+    await sleep(1700);
+    for (let c = word.length; c >= 0; c--) { el.textContent = word.slice(0, c); await sleep(28); }
+    await sleep(250);
+    i++;
+  }
+}
+
+const k = s => `<span class="text-cyan-300">"${s}"</span>`;
+const str = s => `<span class="text-emerald-300">"${s}"</span>`;
+const TERM_LINES = [
+  { cmd: 'whoami' },
+  { out: '<span class="text-zinc-100">anushka_srivastava</span>' },
+  { cmd: 'cat profile.json' },
+  { out: `{
+  ${k('role')}: ${str('Software Engineer')},
+  ${k('domains')}: [${['Backend', 'Full-Stack', 'AI/ML', 'Data'].map(str).join(', ')}],
+  ${k('education')}: ${str('B.Tech CSE (AI/ML) @ MUJ')},
+  ${k('cgpa')}: <span class="text-fuchsia-300">8.73</span>,
+  ${k('open_to_work')}: <span class="text-indigo-300">true</span>
+}` },
+  { cmd: 'git log --oneline -3' },
+  { out: `<span class="text-amber-300">a91f2c</span> research: climate-aware ML @ MUJ R&amp;D
+<span class="text-amber-300">7d03be</span> analytics: 2K+ listings @ Titan
+<span class="text-amber-300">3e8c11</span> backend: 10+ REST APIs @ TechLearn` },
+];
+
+async function runTerminal() {
+  const el = $('#term');
+  const prompt = '<span class="text-emerald-400">➜</span> <span class="text-cyan-300">~</span> ';
+  const cursor = '<span class="caret text-zinc-300">▋</span>';
+  const line = l => l.cmd ? `${prompt}<span class="text-zinc-100">${l.cmd}</span>\n` : `<span class="text-zinc-400">${l.out}</span>\n`;
+  let html = '';
+  if (reduceMotion) { el.innerHTML = TERM_LINES.map(line).join('') + prompt + cursor; return; }
+  await sleep(600);
+  for (const l of TERM_LINES) {
+    if (l.cmd) {
+      for (let c = 1; c <= l.cmd.length; c++) {
+        el.innerHTML = html + prompt + `<span class="text-zinc-100">${l.cmd.slice(0, c)}</span>` + cursor;
+        await sleep(45 + Math.random() * 55);
+      }
+      await sleep(220);
+    }
+    html += line(l);
+    el.innerHTML = html;
+    await sleep(l.cmd ? 120 : 480);
+  }
+  el.innerHTML = html + prompt + cursor;
+}
+
+/* =========================================================
+   BACKGROUND: constellation canvas
+   ========================================================= */
+function initBackground() {
+  const c = $('#bg'); const ctx = c.getContext('2d');
+  let w, h, dpr, pts = [], raf;
+  const mouse = { x: -1e4, y: -1e4 };
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = c.width = innerWidth * dpr; h = c.height = innerHeight * dpr;
+    c.style.width = innerWidth + 'px'; c.style.height = innerHeight + 'px';
+    const n = Math.round(Math.min(85, (innerWidth * innerHeight) / 16000));
+    pts = Array.from({ length: n }, () => ({
+      x: Math.random() * w, y: Math.random() * h,
+      vx: (Math.random() - .5) * .28 * dpr, vy: (Math.random() - .5) * .28 * dpr,
+    }));
+  }
+  function draw(move = true) {
+    ctx.clearRect(0, 0, w, h);
+    const L = 130 * dpr, M = 180 * dpr;
+    for (const p of pts) {
+      if (move) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+      }
+    }
+    ctx.lineWidth = dpr * .8;
+    for (let i = 0; i < pts.length; i++) {
+      const a = pts[i];
+      for (let j = i + 1; j < pts.length; j++) {
+        const b = pts[j]; const dx = a.x - b.x, dy = a.y - b.y; const d = Math.hypot(dx, dy);
+        if (d < L) { ctx.strokeStyle = `rgba(129,140,248,${(1 - d / L) * .16})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+      }
+      const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+      if (md < M) { ctx.strokeStyle = `rgba(34,211,238,${(1 - md / M) * .35})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
+      ctx.fillStyle = 'rgba(165,180,252,.55)';
+      ctx.beginPath(); ctx.arc(a.x, a.y, 1.3 * dpr, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+  function loop() { draw(); raf = requestAnimationFrame(loop); }
+  resize();
+  addEventListener('resize', () => { resize(); if (reduceMotion) draw(false); });
+  addEventListener('pointermove', e => { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; });
+  addEventListener('pointerleave', () => { mouse.x = mouse.y = -1e4; });
+  if (reduceMotion) { draw(false); return; }
+  document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAnimationFrame(raf); else loop(); });
+  loop();
+}
+
+/* =========================================================
+   SCROLL EFFECTS
+   ========================================================= */
+let revealObserver;
+function initReveal() {
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); revealObserver.unobserve(en.target); } });
+  }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  $$('.reveal').forEach(el => revealObserver.observe(el));
+}
+
+function initCounters() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      obs.unobserve(en.target);
+      const el = en.target; const end = parseFloat(el.dataset.count);
+      const dec = +(el.dataset.decimals || 0); const suf = el.dataset.suffix || '';
+      const fmt = v => (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US')) + suf;
+      if (reduceMotion) { el.textContent = fmt(end); return; }
+      const t0 = performance.now(), dur = 1600;
+      const tick = t => { const p = Math.min(1, (t - t0) / dur); el.textContent = fmt(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: .5 });
+  $$('[data-count]').forEach(el => obs.observe(el));
+}
+
+function initActiveNav() {
+  const links = $$('.nav-link');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      links.forEach(l => {
+        const on = l.getAttribute('href') === '#' + en.target.id;
+        l.classList.toggle('text-white', on); l.classList.toggle('bg-white/5', on); l.classList.toggle('text-zinc-400', !on);
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  $$('main section[id]').forEach(s => obs.observe(s));
+}
+
+function onScroll() {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  $('#progress').style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+  const nav = $('#nav'); const scrolled = scrollY > 16;
+  nav.classList.toggle('bg-zinc-950/70', scrolled);
+  nav.classList.toggle('backdrop-blur-xl', scrolled);
+  nav.classList.toggle('border-white/5', scrolled);
+  nav.classList.toggle('border-transparent', !scrolled);
+  const tl = $('#timeline');
+  if (tl) {
+    const r = tl.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (innerHeight * .65 - r.top) / r.height));
+    $('#timeline-fill').style.height = `calc(${p * 100}% - ${p * 1}rem)`;
+  }
+}
+
+/* =========================================================
+   COMMAND PALETTE
+   ========================================================= */
+const COMMANDS = [
+  { label: 'Go to About', hint: 'Section', icon: 'layers', run: () => go('#about') },
+  { label: 'Go to Skills', hint: 'Section', icon: 'code', run: () => go('#skills') },
+  { label: 'Go to Projects', hint: 'Section', icon: 'server', run: () => go('#projects') },
+  { label: 'Go to Experience', hint: 'Section', icon: 'chart', run: () => go('#experience') },
+  { label: 'Go to Credentials', hint: 'Section', icon: 'award', run: () => go('#credentials') },
+  { label: 'Go to Contact', hint: 'Section', icon: 'mail', run: () => go('#contact') },
+  { label: 'Open résumé', hint: 'PDF', icon: 'file', run: () => openUrl(DATA.resume) },
+  { label: 'Open GitHub', hint: '@anu091104', icon: 'github', run: () => openUrl(DATA.github) },
+  { label: 'Open LinkedIn', hint: 'anushka0904', icon: 'linkedin', run: () => openUrl(DATA.linkedin) },
+  { label: 'Copy email address', hint: DATA.email, icon: 'copy', run: () => copyText(DATA.email, 'Email copied') },
+  { label: 'Copy phone number', hint: DATA.phone, icon: 'phone', run: () => copyText(DATA.phone, 'Phone number copied') },
+  { label: 'Send an email', hint: 'mailto', icon: 'mail', run: () => { location.href = 'mailto:' + DATA.email; } },
+  { label: 'Show Full-Stack & Backend projects', hint: 'Filter', icon: 'server', run: () => { activeTech = null; setCat('fullstack'); go('#projects'); } },
+  { label: 'Show AI & Data Science projects', hint: 'Filter', icon: 'cpu', run: () => { activeTech = null; setCat('ai'); go('#projects'); } },
+  { label: 'Show DevOps / Tools projects', hint: 'Filter', icon: 'wrench', run: () => { activeTech = null; setCat('devops'); go('#projects'); } },
+];
+let cmdResults = COMMANDS, cmdIndex = 0;
+
+function renderCmd() {
+  const q = $('#cmdk-input').value.trim().toLowerCase();
+  cmdResults = COMMANDS.filter(c => (c.label + ' ' + c.hint).toLowerCase().includes(q));
+  cmdIndex = Math.min(cmdIndex, Math.max(0, cmdResults.length - 1));
+  $('#cmdk-list').innerHTML = cmdResults.length
+    ? cmdResults.map((c, i) => `<li role="option" data-idx="${i}" aria-selected="${i === cmdIndex}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-zinc-300 cursor-pointer">
+        <span class="w-8 h-8 grid place-items-center rounded-md bg-white/5 text-zinc-400">${I(c.icon)}</span>
+        <span class="flex-1">${c.label}</span><span class="text-xs text-zinc-500 truncate max-w-[40%]">${c.hint}</span></li>`).join('')
+    : '<li class="px-3 py-8 text-center text-sm text-zinc-500">No results</li>';
+  $('#cmdk-list li[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
+}
+function openCmd() { const m = $('#cmdk'); m.classList.remove('hidden'); m.classList.add('flex'); $('#cmdk-input').value = ''; cmdIndex = 0; renderCmd(); setTimeout(() => $('#cmdk-input').focus(), 10); }
+function closeCmd() { const m = $('#cmdk'); m.classList.add('hidden'); m.classList.remove('flex'); }
+function runCmd(i) { const c = cmdResults[i]; if (!c) return; closeCmd(); setTimeout(c.run, 50); }
+
+/* =========================================================
+   INIT
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  renderPillars(); renderSkills(); renderFilters(); renderProjects(); renderExperience(); renderCerts();
+  hydrateIcons();
+  $('#year').textContent = new Date().getFullYear();
+  if (!/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) $('#kbd').textContent = 'Ctrl K';
+  else $('#kbd').textContent = '⌘K';
+
+  initReveal(); initCounters(); initActiveNav(); initBackground();
+  typeRoles(); runTerminal();
+
+  let ticking = false;
+  addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(() => { onScroll(); ticking = false; }); ticking = true; } }, { passive: true });
+  onScroll();
+
+  // Spotlight cards
+  document.addEventListener('pointermove', e => {
+    const card = e.target.closest?.('.spot'); if (!card) return;
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--x', `${e.clientX - r.left}px`);
+    card.style.setProperty('--y', `${e.clientY - r.top}px`);
+  });
+
+  // Filters / skill chips / copy buttons
+  document.addEventListener('click', e => {
+    const cat = e.target.closest('[data-cat]'); if (cat) { setCat(cat.dataset.cat); return; }
+    const tech = e.target.closest('[data-tech]'); if (tech) { setTech(tech.dataset.tech); go('#projects'); return; }
+    const cp = e.target.closest('[data-copy]');
+    if (cp) {
+      copyText(cp.dataset.copy, cp.dataset.msg);
+      const old = cp.innerHTML; cp.innerHTML = I('check', 'w-4 h-4 text-emerald-400');
+      setTimeout(() => { cp.innerHTML = old; }, 1500);
+    }
+  });
+  $('#tech-clear').addEventListener('click', clearTech);
+
+  // Mobile menu
+  const menu = $('#mobile-menu'), menuBtn = $('#menu-btn');
+  menuBtn.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.innerHTML = I(open ? 'x' : 'menu', 'w-5 h-5');
+    if (open) $('#nav').classList.add('bg-zinc-950/70', 'backdrop-blur-xl');
+  });
+  $$('#mobile-menu a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.innerHTML = I('menu', 'w-5 h-5');
+  }));
+
+  // Command palette
+  $('#cmdk-btn').addEventListener('click', openCmd);
+  $('#cmdk').addEventListener('click', e => { if (e.target.id === 'cmdk') closeCmd(); });
+  $('#cmdk-input').addEventListener('input', () => { cmdIndex = 0; renderCmd(); });
+  $('#cmdk-list').addEventListener('click', e => { const li = e.target.closest('[data-idx]'); if (li) runCmd(+li.dataset.idx); });
+  $('#cmdk-list').addEventListener('mousemove', e => {
+    const li = e.target.closest('[data-idx]'); if (li && +li.dataset.idx !== cmdIndex) { cmdIndex = +li.dataset.idx; $$('#cmdk-list [data-idx]').forEach(x => x.setAttribute('aria-selected', +x.dataset.idx === cmdIndex)); }
+  });
+  document.addEventListener('keydown', e => {
+    const open = !$('#cmdk').classList.contains('hidden');
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); open ? closeCmd() : openCmd(); return; }
+    if (!open && e.key === '/' && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) { e.preventDefault(); openCmd(); return; }
+    if (!open) return;
+    if (e.key === 'Escape') closeCmd();
+    else if (e.key === 'ArrowDown') { e.preventDefault(); cmdIndex = (cmdIndex + 1) % Math.max(1, cmdResults.length); renderCmd(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); cmdIndex = (cmdIndex - 1 + cmdResults.length) % Math.max(1, cmdResults.length); renderCmd(); }
+    else if (e.key === 'Enter') { e.preventDefault(); runCmd(cmdIndex); }
+  });
+});
+</script>
+</body>
+</html>
