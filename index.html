@@ -149,7 +149,7 @@
           <i data-i="search" class="w-3.5 h-3.5"></i><span>Search</span>
           <kbd id="kbd" class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-zinc-300">Ctrl K</kbd>
         </button>
-        <a href="resume.pdf" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 btn-primary text-sm px-4 py-2 rounded-lg font-semibold">
+        <a href="resume.pdf" data-resume target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-1.5 btn-primary text-sm px-4 py-2 rounded-lg font-semibold">
           <i data-i="file" class="w-4 h-4"></i>Resume
         </a>
         <button id="menu-btn" class="md:hidden w-10 h-10 grid place-items-center rounded-lg bg-white/5 border border-white/10 text-zinc-200" aria-label="Toggle menu" aria-expanded="false">
@@ -164,7 +164,7 @@
       <a href="#experience" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Experience</a>
       <a href="#credentials" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Credentials</a>
       <a href="#contact" class="block px-4 py-3 rounded-xl text-zinc-300 hover:bg-white/5">Contact</a>
-      <a href="resume.pdf" target="_blank" rel="noopener" class="mt-1 flex items-center justify-center gap-2 btn-primary px-4 py-3 rounded-xl font-semibold"><i data-i="file" class="w-4 h-4"></i>View Resume</a>
+      <a href="resume.pdf" data-resume target="_blank" rel="noopener" class="mt-1 flex items-center justify-center gap-2 btn-primary px-4 py-3 rounded-xl font-semibold"><i data-i="file" class="w-4 h-4"></i>View Resume</a>
     </div>
   </header>
 
@@ -189,7 +189,7 @@
             B.Tech CSE (AI/ML) at Manipal University Jaipur — shipping production APIs, analytics pipelines and ML workflows across industry and research.
           </p>
           <div class="mt-8 flex flex-wrap items-center gap-3">
-            <a href="resume.pdf" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold"><i data-i="file" class="w-4 h-4"></i>View Resume</a>
+            <a href="resume.pdf" data-resume target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold"><i data-i="file" class="w-4 h-4"></i>View Resume</a>
             <a href="https://github.com/anu091104" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-zinc-100"><i data-i="github" class="w-4 h-4"></i>GitHub</a>
             <a href="https://www.linkedin.com/in/anushka0904/" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-zinc-100"><i data-i="linkedin" class="w-4 h-4"></i>LinkedIn</a>
             <a href="#contact" class="group inline-flex items-center gap-1.5 px-3 py-3 text-zinc-300 hover:text-white">Contact Me <i data-i="arrow" class="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i></a>
@@ -360,7 +360,7 @@
               <a href="mailto:anushkasri0904@gmail.com?subject=Hello%20Anushka%20%E2%80%94%20Opportunity" class="btn-primary inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold"><i data-i="mail" class="w-4 h-4"></i>Say hello</a>
               <a href="https://www.linkedin.com/in/anushka0904/" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-100"><i data-i="linkedin" class="w-4 h-4"></i>LinkedIn</a>
               <a href="https://github.com/anu091104" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-100"><i data-i="github" class="w-4 h-4"></i>GitHub</a>
-              <a href="resume.pdf" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-100"><i data-i="file" class="w-4 h-4"></i>Resume</a>
+              <a href="resume.pdf" data-resume target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-zinc-100"><i data-i="file" class="w-4 h-4"></i>Resume</a>
             </div>
             <p class="mt-8 flex items-center gap-2 text-sm text-zinc-500"><i data-i="pin" class="w-4 h-4"></i>Jaipur / Lucknow, India · IST (UTC+5:30)</p>
           </div>
@@ -405,7 +405,10 @@ const DATA = {
   phone: '+91-9555655127',
   github: 'https://github.com/anu091104',
   linkedin: 'https://www.linkedin.com/in/anushka0904/',
-  resume: 'resume.pdf', // put your resume.pdf next to index.html
+  // RESUME: to update, just replace resume.pdf in the repo (same name) — no code change needed.
+  // If visitors still see the old one (browser cache), bump the version: 'resume.pdf?v=2', 'resume.pdf?v=3', ...
+  // Renamed the file? Change it here — every resume button on the site follows this one line.
+  resume: 'resume.pdf?v=1',
 };
 
 const ROLES = ['Backend Engineer', 'Full-Stack Developer', 'ML Engineer', 'Data & Analytics Engineer'];
@@ -951,6 +954,7 @@ function runCmd(i) { const c = cmdResults[i]; if (!c) return; closeCmd(); setTim
 document.addEventListener('DOMContentLoaded', () => {
   renderPillars(); renderSkills(); renderFilters(); renderProjects(); renderExperience(); renderCerts();
   hydrateIcons();
+  $$('[data-resume]').forEach(a => { a.href = DATA.resume; });
   $('#year').textContent = new Date().getFullYear();
   if (!/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) $('#kbd').textContent = 'Ctrl K';
   else $('#kbd').textContent = '⌘K';
